@@ -10,13 +10,15 @@ module.exports = function(app){
           friends.push(req.body);
           res.json(true);
           var compatibility = [];
+          var scores = [];
+          var newFriend;
+          var oldFriend;
           friends.forEach(function(friend, i){
                 var total = 0;
                 var newScores = req.body.scores;
                 var oldScores = friend.scores;
-                var newFriend = req.body.name;
-                var oldFriend = friend.name;
-
+                newFriend = req.body.name;
+                oldFriend = friend.name;
 
                 if (newFriend != oldFriend){
                     console.log("Friend:");
@@ -46,9 +48,38 @@ module.exports = function(app){
                 // var compatibility = newScores - 
             })
             console.log(compatibility);
-            compatibility.forEach(function(score){
-                console.log(score.difference);
-            })
+                var smallest = 0;
+                var bestMatch;
+                for (var i = 0; i < compatibility.length; i++){
+                    var difference = compatibility[i].difference;
+                    scores.push(difference);
+                    if(compatibility[i].name != oldFriend){
+                        smallest = Math.min.apply(Math, scores); 
+                        if (smallest === compatibility[i].difference){
+                            bestMatch = compatibility[i].name;
+                        }
+                    }
+                    
+                }
+                    if (newFriend != oldFriend){
+                    }
+                
+                    // if (smallest === compatibility[i].difference){
+                    //     console.log("Has the biggest compatibility!");
+                    //     console.log(compatibility[i].name);
+                    // }
+                
+
+
+
+                console.log("Smallest Difference: ");
+                console.log(smallest);
+                console.log("Compatibility: ");
+                console.log(compatibility);
+                console.log("Best Match: " + bestMatch);
+                
+    
+            
 
       });
     

@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 //this is what connects the routing files
-// require("./routing/apiRoutes")(app);
+require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
 

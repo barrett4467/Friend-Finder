@@ -17,85 +17,88 @@
 </head>
 <body>
 <div class="container">
-    <h1>Survey Questions</h1>
-    <a href="/"><button id="homeBtn"><img src="assets/spider.png" id="spider">home</button></a>
-    <hr>
-    <h3>About You</h3>
-    <form>
-        <!-- these are for Name and Photo -->
-        <h3>What is your name: </h3>
-        <input type="text" id="name" required>
-        <h3>Please provide a link to a photo:</h3>
-        <input type="text" id="photo" required>
-        <p>Please answer these questions. (1 is strongly disagree. 5 is strongly agree)</p>
-        <!--These are for the questions-->
-
-        <fieldset id="question1">
-                <h3>Question 1</h3> 
-
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question1" >1<input type="radio" value="2" name="question1">2<input type="radio" value="3" name="question1">3<input type="radio" value="4" name="question1">4<input type="radio" value="5" name="question1" checked>5
-        </fieldset>
-        <fieldset id="question2">
-                <h3>Question 2</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question2" >1<input type="radio" value="2" name="question2">2<input type="radio" value="3" name="question2">3<input type="radio" value="4" name="question2">4<input type="radio" value="5" name="question2" checked>5
-        </fieldset>
-        <fieldset id="question3">
-                <h3>Question 3</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question3" >1<input type="radio" value="2" name="question3">2<input type="radio" value="3" name="question3">3<input type="radio" value="4" name="question3">4<input type="radio" value="5" name="question3" checked>5
-        </fieldset>
-        <fieldset id="question4">
-                <h3>Question 4</h3> 
-
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question4" >1<input type="radio" value="2" name="question4">2<input type="radio" value="3" name="question4">3<input type="radio" value="4" name="question4">4<input type="radio" value="5" name="question4" checked>5
-        </fieldset>
-        <fieldset id="question5">
-                <h3>Question 5</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question5" >1<input type="radio" value="2" name="question5">2<input type="radio" value="3" name="question5">3<input type="radio" value="4" name="question5">4<input type="radio" value="5" name="question5" checked>5
-        </fieldset>
-        <fieldset id="question6">
-                <h3>Question 6</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question6" >1<input type="radio" value="2" name="question6">2<input type="radio" value="3" name="question6">3<input type="radio" value="4" name="question6">4<input type="radio" value="5" name="question6" checked>5
-        </fieldset>
-        <fieldset id="question7">
-                <h3>Question 7</h3> 
-
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question7" >1<input type="radio" value="2" name="question7">2<input type="radio" value="3" name="question7">3<input type="radio" value="4" name="question7">4<input type="radio" value="5" name="question7" checked>5
-        </fieldset>
-        <fieldset id="question8">
-                <h3>Question 8</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question8" >1<input type="radio" value="2" name="question8">2<input type="radio" value="3" name="question8">3<input type="radio" value="4" name="question8">4<input type="radio" value="5" name="question8" checked>5
-        </fieldset>
-        <fieldset id="question9">
-                <h3>Question 9</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question9" >1<input type="radio" value="2" name="question9">2<input type="radio" value="3" name="question9">3<input type="radio" value="4" name="question9">4<input type="radio" value="5" name="question9" checked>5
-        </fieldset>
-        <fieldset id="question10">
-                <h3>Question 10</h3> 
-                <h4>Insert Here:</h4>
-                <input type="radio" value="1" name="question10" >1<input type="radio" value="2" name="question10">2<input type="radio" value="3" name="question10">3<input type="radio" value="4" name="question10">4<input type="radio" value="5" name="question10" checked>5
-        </fieldset>
-
-       
-        <button type="submit" id="submit"><a href="#ex1" rel="modal:open">Submit</a></button>
-
-        <!-- Modal HTML embedded directly into document -->
-        <div id="ex1" class="modal">
-                <h1 id="modalText"></h1>
-                <img id="modalImage">
+        <div class="content">
+                <h1>Survey Questions</h1>
+                <a href="/"><button id="homeBtn"><img src="assets/spider.png" id="spider">home</button></a>
+                <form>
+                        <!-- these are for Name and Photo -->
+                        <fieldset id="fieldset1">
+                                <h3>What is your name: </h3>
+                                <input type="text" id="name" required>
+                                <h3>Please provide a link to a photo:</h3>
+                                <input type="text" id="photo" required>
+                                <p>Please answer these questions. (1 is strongly disagree. 5 is strongly agree)</p>
+                        </fieldset>
+                        <!--These are for the questions-->
+                
+                        <fieldset id="question1">
+                                <h3>Question 1</h3> 
+                
+                                <h4>Spiders freak me out.</h4>
+                                <input type="radio" value="1" name="question1" >1<input type="radio" value="2" name="question1">2<input type="radio" value="3" name="question1">3<input type="radio" value="4" name="question1">4<input type="radio" value="5" name="question1" checked>5
+                        </fieldset>
+                        <fieldset id="question2">
+                                <h3>Question 2</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question2" >1<input type="radio" value="2" name="question2">2<input type="radio" value="3" name="question2">3<input type="radio" value="4" name="question2">4<input type="radio" value="5" name="question2" checked>5
+                        </fieldset>
+                        <fieldset id="question3">
+                                <h3>Question 3</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question3" >1<input type="radio" value="2" name="question3">2<input type="radio" value="3" name="question3">3<input type="radio" value="4" name="question3">4<input type="radio" value="5" name="question3" checked>5
+                        </fieldset>
+                        <fieldset id="question4">
+                                <h3>Question 4</h3> 
+                
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question4" >1<input type="radio" value="2" name="question4">2<input type="radio" value="3" name="question4">3<input type="radio" value="4" name="question4">4<input type="radio" value="5" name="question4" checked>5
+                        </fieldset>
+                        <fieldset id="question5">
+                                <h3>Question 5</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question5" >1<input type="radio" value="2" name="question5">2<input type="radio" value="3" name="question5">3<input type="radio" value="4" name="question5">4<input type="radio" value="5" name="question5" checked>5
+                        </fieldset>
+                        <fieldset id="question6">
+                                <h3>Question 6</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question6" >1<input type="radio" value="2" name="question6">2<input type="radio" value="3" name="question6">3<input type="radio" value="4" name="question6">4<input type="radio" value="5" name="question6" checked>5
+                        </fieldset>
+                        <fieldset id="question7">
+                                <h3>Question 7</h3> 
+                
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question7" >1<input type="radio" value="2" name="question7">2<input type="radio" value="3" name="question7">3<input type="radio" value="4" name="question7">4<input type="radio" value="5" name="question7" checked>5
+                        </fieldset>
+                        <fieldset id="question8">
+                                <h3>Question 8</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question8" >1<input type="radio" value="2" name="question8">2<input type="radio" value="3" name="question8">3<input type="radio" value="4" name="question8">4<input type="radio" value="5" name="question8" checked>5
+                        </fieldset>
+                        <fieldset id="question9">
+                                <h3>Question 9</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question9" >1<input type="radio" value="2" name="question9">2<input type="radio" value="3" name="question9">3<input type="radio" value="4" name="question9">4<input type="radio" value="5" name="question9" checked>5
+                        </fieldset>
+                        <fieldset id="question10">
+                                <h3>Question 10</h3> 
+                                <h4>Insert Here:</h4>
+                                <input type="radio" value="1" name="question10" >1<input type="radio" value="2" name="question10">2<input type="radio" value="3" name="question10">3<input type="radio" value="4" name="question10">4<input type="radio" value="5" name="question10" checked>5
+                        </fieldset>
+                
+                        
+                        <button type="submit" id="submit"><a href="#ex1" rel="modal:open">Submit</a></button>
+                
+                        <!-- Modal HTML embedded directly into document -->
+                        <div id="ex1" class="modal">
+                                <h1 id="modalText"></h1>
+                                <img id="modalImage">
+                        </div>
+                        
+                        <!-- Link to open the modal -->
+                        <!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+                        </form> -->
+                
         </div>
-      
-      <!-- Link to open the modal -->
-        <!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
-        </form> -->
 
 </div>
 <footer>

@@ -7,6 +7,9 @@
     <title>Survey</title>
     <!-- Linking jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Linking Modal-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
     <h1>Survey Questions</h1>
@@ -15,9 +18,9 @@
     <form>
         <!-- these are for Name and Photo -->
         <h3>What is your name: </h3>
-        <input type="text" id="name">
+        <input type="text" id="name" required>
         <h3>Please provide a link to a photo:</h3>
-        <input type="text" id="photo">
+        <input type="text" id="photo" required>
         <p>Please answer these questions. (1 is strongly disagree. 5 is strongly agree)</p>
         <!--These are for the questions-->
 
@@ -76,65 +79,18 @@
         </fieldset>
 
        
-        <button type="submit" id="submit">submit</button>
-    </form>
-    <script type="text/javascript">
-        $("#submit").on("click", function(event){
-            //stops the refresh so the rest of the js will run
-            event.preventDefault();
-            
-            var newFriend = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("input[name='question1']:checked").val(),
-                    $("input[name='question2']:checked").val(),
-                    $("input[name='question3']:checked").val(),
-                    $("input[name='question4']:checked").val(),
-                    $("input[name='question5']:checked").val(),
-                    $("input[name='question6']:checked").val(),
-                    $("input[name='question7']:checked").val(),
-                    $("input[name='question8']:checked").val(),
-                    $("input[name='question9']:checked").val(),
-                    $("input[name='question10']:checked").val(),
-                ]
-            }
+        <button type="submit" id="submit"><a href="#ex1" rel="modal:open">Submit</a></button>
 
-            reset();
-            function reset(){
-            //resets the name and photo fields
-            $("#name").val("");
-            $("#photo").val("");
-            //this resets the question radios to 5 
-            $("input[name='question1']:checked").prop("checked", false);
-            $("input[name='question1']").val("1").prop("checked", true);
-            $("input[name='question2']:checked").prop("checked", false);
-            $("input[name='question2']").val("1").prop("checked", true);
-            $("input[name='question3']:checked").prop("checked", false);
-            $("input[name='question3']").val("1").prop("checked", true);
-            $("input[name='question4']:checked").prop("checked", false);
-            $("input[name='question4']").val("1").prop("checked", true);
-            $("input[name='question5']:checked").prop("checked", false);
-            $("input[name='question5']").val("1").prop("checked", true);
-            $("input[name='question6']:checked").prop("checked", false);
-            $("input[name='question6']").val("1").prop("checked", true);
-            $("input[name='question7']:checked").prop("checked", false);
-            $("input[name='question7']").val("1").prop("checked", true);
-            $("input[name='question8']:checked").prop("checked", false);
-            $("input[name='question8']").val("1").prop("checked", true);
-            $("input[name='question9']:checked").prop("checked", false);
-            $("input[name='question9']").val("1").prop("checked", true);
-            $("input[name='question10']:checked").prop("checked", false);
-            $("input[name='question10']").val("1").prop("checked", true);
-            }
+        <!-- Modal HTML embedded directly into document -->
+        <div id="ex1" class="modal">
+                <h1 id="modalText"></h1>
+                <img id="modalImage">
+        </div>
+      
+      <!-- Link to open the modal -->
+        <!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+        </form> -->
 
-            $.post("/api/friends", newFriend, function(data){
-                if(data){
-                    alert("You've been added!");
-                    console.log(data);
-                }
-            })
-        })
-    </script>
+        <script src="assets/app.js"></script>
 </body>
 </html>

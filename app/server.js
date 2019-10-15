@@ -7,6 +7,8 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static("public"));
+
 
 //this is what connects the routing files
 require("./routing/apiRoutes")(app);

@@ -6,7 +6,9 @@ $("#submit").on("click", function(event){
     if($("#name").val() != "" && $("#photo").val() != ""){
         function checkUrl(){
            console.log(photoUrl);
-           var checker = photoUrl.includes("png", "jpeg", "jpg", "bmp", "bpg", "gif");
+           var checker = photoUrl.includes("jpg") || photoUrl.includes("png") || photoUrl.includes("jpeg") || photoUrl.includes("bmp") ||photoUrl.includes("bpg") || photoUrl.includes("gif");
+
+        //    "png"|| "jpeg"|||| "bmp"|| "bpg"|| "gif"
            console.log(checker);
            return checker;
         }

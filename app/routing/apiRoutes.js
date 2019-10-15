@@ -12,28 +12,34 @@ module.exports = function(app){
           var scores = [];
           var newFriend;
           var oldFriend;
-          friends.forEach(function(friend, i){
+          friends.forEach(function(friend){
         
                 var total = 0;
                 var newScores = req.body.scores;
                 var oldScores = friend.scores;
                 newFriend = req.body.name;
                 oldFriend = friend.name;
-
+                console.log("new:")
+                console.log(newScores);
+                console.log("old:")
+                console.log(oldScores);
                 if (newFriend != oldFriend){
                     // console.log("Friend:");
                     // console.log("New: " + newFriend);
                     // console.log("Old: " + oldFriend);
+                    var thisNewScore = 0;
+                    var thisOldScore = 0;
+                    
                     newScores.forEach(function(score){
-                        thisNewScore = parseInt(score);
+                        thisNewScore += parseInt(score);
+                        console.log("this new: "+ thisNewScore);
                     })
                     oldScores.forEach(function(score){
-                        thisOldScore = parseInt(score);
+                        thisOldScore += parseInt(score);
+                        console.log("this old: "+ thisOldScore);
                     })
                     total = Math.abs(thisNewScore - thisOldScore);
-                    // console.log("this new: "+ thisNewScore);
-                    // console.log("this old: "+ thisOldScore);
-    
+
     
                     // console.log("Total Difference " + i + ": " + total);
 
@@ -64,8 +70,8 @@ module.exports = function(app){
                 // console.log(smallest);
                 // console.log("Compatibility: ");
                 // console.log(compatibility);
-                console.log("Best Match: ");
-                console.log(bestMatch);
+                // console.log("Best Match: ");
+                // console.log(bestMatch);
 
                 // friends.push({bestMatch: bestMatch});
                 res.json({name: bestMatch.name, photo: bestMatch.photo});

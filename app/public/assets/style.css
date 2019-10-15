@@ -31,6 +31,13 @@ p {
     font-size: 1.5rem;
     font-family: 'News Cycle', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+a :hover {
+    color: #5e32ba;
+}
 #spider{
     float: left;
     bottom: -8px;
@@ -69,15 +76,15 @@ input {
     
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
 fieldset{
     font-size: 24px;
     border: 2px solid black;
     margin: 5px;
     background-color: #ffa269;
+}
+#footerLinks:hover, #submit:hover{
+    color: #5e32ba;
 }
 footer {
     position: absolute;

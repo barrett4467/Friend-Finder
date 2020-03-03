@@ -4,7 +4,7 @@ Friend Finder is a monster themed application that takes a survey of random ques
 
 ![](FriendFinder.gif)
 
-##Technologies:
+## Technologies:
     HTML
     CSS
     jQuery
